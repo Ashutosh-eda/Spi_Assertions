@@ -1,0 +1,386 @@
+[2025-07-08 01:20:20 UTC] chmod +x run.bash; sed -i -e 's/\r//g' run.bash; ./run.bash  
+Running transaction txno = 1
+TOOL:	xrun(64)	23.09-s001: Started on Jul 07, 2025 at 21:20:21 EDT
+xrun(64): 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+file: design.sv
+	module worklib.spi_test:sv
+		errors: 0, warnings: 0
+	module worklib.spi:sv
+		errors: 0, warnings: 0
+file: testbench.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.spi:sv <0x02406ac2>
+			streams:   9, words: 19010
+		worklib.spi_test:sv <0x2582b5ce>
+			streams:   6, words: 31407
+		worklib.top:sv <0x7a1229ad>
+			streams: 159, words: 106867
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     3       3
+		Registers:                 132     153
+		Scalar wires:                9       -
+		Named events:                2       2
+		Always blocks:              25      25
+		Initial blocks:             17      17
+		Cont. assignments:           3       3
+		Pseudo assignments:          4       -
+		Assertions:                  8       8
+		SV Class declarations:       9       9
+		SV Class specializations:    9       9
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xcelium> source /xcelium23.09/tools/xcelium/files/xmsimrc
+xcelium> reset
+SVSEED set from command line: 1
+Loaded snapshot worklib.top:sv
+xcelium> run
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 20 NS + 1
+./design.sv:60       $stop;
+xcelium> deposit txno = 1
+xcelium> run
++++++++++++++++++++++++++++++++++++++++++++++
+LEGAL txn: config txn sent
++++++++++++++++++++++++++++++++++++++++++++++
+Time is                   45, Head is 00000001, Head[i] is 0, Serial is 1, i is           1
+Time is                   55, Head is 00000011, Head[i] is 0, Serial is 1, i is           2
+Time is                   65, Head is 00000011, Head[i] is 0, Serial is 0, i is           3
+Time is                   75, Head is 00000011, Head[i] is 0, Serial is 0, i is           4
+Time is                   85, Head is 00000011, Head[i] is 0, Serial is 0, i is           5
+Time is                   95, Head is 00000011, Head[i] is 0, Serial is 0, i is           6
+Time is                  105, Head is 01000011, Head[i] is 0, Serial is 1, i is           7
+Time is                  115, Head is 11000011, Head[i] is x, Serial is 1, i is           8
+---------------------------------------------
+config frame received : 02
+---------------------------------------------
+dat is c3
+dat is c3
+dat is c3
+Head is c3, i is           8
+Assertion FRMCHK passed!
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 220 NS + 2
+./design.sv:60       $stop;
+xcelium> quit
+TOOL:	xrun(64)	23.09-s001: Exiting on Jul 07, 2025 at 21:20:22 EDT  (total: 00:00:01)
+Output saved to sim_tx1.log
+Running transaction txno = 2
+TOOL:	xrun(64)	23.09-s001: Started on Jul 07, 2025 at 21:20:22 EDT
+xrun(64): 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xcelium> source /xcelium23.09/tools/xcelium/files/xmsimrc
+xcelium> reset
+SVSEED set from command line: 1
+Loaded snapshot worklib.top:sv
+xcelium> run
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 20 NS + 1
+./design.sv:60       $stop;
+xcelium> deposit txno = 2
+xcelium> run
++++++++++++++++++++++++++++++++++++++++++++++
+LEGAL txn: start txn sent
++++++++++++++++++++++++++++++++++++++++++++++
+Time is                   45, Head is 00000000, Head[i] is 0, Serial is 0, i is           1
+Time is                   55, Head is 00000010, Head[i] is 0, Serial is 1, i is           2
+Time is                   65, Head is 00000110, Head[i] is 0, Serial is 1, i is           3
+Time is                   75, Head is 00001110, Head[i] is 0, Serial is 1, i is           4
+Time is                   85, Head is 00001110, Head[i] is 0, Serial is 0, i is           5
+Time is                   95, Head is 00101110, Head[i] is 0, Serial is 1, i is           6
+Time is                  105, Head is 01101110, Head[i] is 0, Serial is 1, i is           7
+---------------------------------------------
+start frame received
+---------------------------------------------
+Time is                  115, Head is 11101110, Head[i] is x, Serial is 1, i is           8
+Head is ee, i is           8
+Assertion FRMCHK passed!
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 140 NS + 2
+./design.sv:60       $stop;
+xcelium> quit
+TOOL:	xrun(64)	23.09-s001: Exiting on Jul 07, 2025 at 21:20:23 EDT  (total: 00:00:01)
+Output saved to sim_tx2.log
+Running transaction txno = 3
+TOOL:	xrun(64)	23.09-s001: Started on Jul 07, 2025 at 21:20:23 EDT
+xrun(64): 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xcelium> source /xcelium23.09/tools/xcelium/files/xmsimrc
+xcelium> reset
+SVSEED set from command line: 1
+Loaded snapshot worklib.top:sv
+xcelium> run
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 20 NS + 1
+./design.sv:60       $stop;
+xcelium> deposit txno = 3
+xcelium> run
+Time is                   45, Head is 00000000, Head[i] is 0, Serial is 0, i is           1
+Time is                   55, Head is 00000010, Head[i] is 0, Serial is 1, i is           2
+Time is                   65, Head is 00000010, Head[i] is 0, Serial is 0, i is           3
+Time is                   75, Head is 00001010, Head[i] is 0, Serial is 1, i is           4
+Time is                   85, Head is 00001010, Head[i] is 0, Serial is 0, i is           5
+Time is                   95, Head is 00101010, Head[i] is 0, Serial is 1, i is           6
+Time is                  105, Head is 00101010, Head[i] is 0, Serial is 0, i is           7
+------------------------------------------------
+read header received, sending data : 6d
+------------------------------------------------
+Time is                  115, Head is 10101010, Head[i] is x, Serial is 1, i is           8
+Sampling read data at                  135
+Sampling read data at                  145
+Sampling read data at                  155
+Sampling read data at                  165
+Sampling read data at                  175
+Sampling read data at                  185
+Sampling read data at                  195
+Sampling read data at                  205
+Sampling read data at                  215
+++++++++++++++++++++++++++++++++++++++++++++++++
+LEGAL txn: read txn rxed: test data read was 6d
+++++++++++++++++++++++++++++++++++++++++++++++++
+Head is aa, i is           8
+Assertion FRMCHK passed!
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 240 NS + 2
+./design.sv:60       $stop;
+xcelium> quit
+TOOL:	xrun(64)	23.09-s001: Exiting on Jul 07, 2025 at 21:20:23 EDT  (total: 00:00:00)
+Output saved to sim_tx3.log
+Running transaction txno = 4
+TOOL:	xrun(64)	23.09-s001: Started on Jul 07, 2025 at 21:20:23 EDT
+xrun(64): 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xcelium> source /xcelium23.09/tools/xcelium/files/xmsimrc
+xcelium> reset
+SVSEED set from command line: 1
+Loaded snapshot worklib.top:sv
+xcelium> run
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 20 NS + 1
+./design.sv:60       $stop;
+xcelium> deposit txno = 4
+xcelium> run
++++++++++++++++++++++++++++++++++++++++++++++
+ILLEGAL txn: short frame sent
++++++++++++++++++++++++++++++++++++++++++++++
+Time is                   45, Head is 00000001, Head[i] is 0, Serial is 1, i is           1
+Time is                   55, Head is 00000011, Head[i] is 0, Serial is 1, i is           2
+Time is                   65, Head is 00000011, Head[i] is 0, Serial is 0, i is           3
+Time is                   75, Head is 00000011, Head[i] is 0, Serial is 0, i is           4
+Time is                   85, Head is 00000011, Head[i] is 0, Serial is 0, i is           5
+Time is                   95, Head is 00000011, Head[i] is 0, Serial is 0, i is           6
+Time is                  105, Head is 01000011, Head[i] is 0, Serial is 1, i is           7
+Time is                  115, Head is 11000011, Head[i] is x, Serial is 1, i is           8
+  frame[*8] ##1 (!frame && (dat == cfg), $display("dat is %x", dat) );
+      |
+xmsim: *E,ASRTST (./testbench.sv,74): (time 125 NS) Assertion top.FRMCHK_BEST has failed (10 cycles, starting 35 NS)
+  frame[*8] ##1 (!frame && (dat == cfg), $display("dat is %x", dat) );
+      |
+xmsim: *E,ASRTST (./testbench.sv,62): (time 125 NS) Assertion top.FRMCHK has failed (10 cycles, starting 35 NS)
+Assertion FRMCHK failed!
+
+#################################################################################################
+#################################################################################################
+
+=================================================================================================
+
+   Select LEGAL txn: config = 1; start = 2, read = 3
+OR Select ILLEGAL txn: short = 4; long = 5, unknown = 6
+OR Select Instructions for lab part 2 - allowing suspend = 7
+Your properties should pass all legal and fail all illegal transactions.
+Remember to check your cover statements for each transaction in part 2 of the lab.
+=================================================================================================
+
+ ############ HOW TO RUN THE TESTS #####################   
+ Add the desired signals to the waveform window.
+ Enter your transaction number choice from the menu above.
+
+ At xmsim> prompt enter:- reset; run; deposit txno = n; run;
+
+ For example, to send a read transaction then enter :- 
+     xmsim> reset; run; deposit txno = 3; run;
+
+ ***IMPORTANT*** - To select another test without leaving the simulator, enter again  :- 
+     xmsim> reset; run; deposit txno = n; run;
+Simulation stopped via $stop(1) at time 140 NS + 2
+./design.sv:60       $stop;
+xcelium> quit
+TOOL:	xrun(64)	23.09-s001: Exiting on Jul 07, 2025 at 21:20:23 EDT  (total: 00:00:00)
